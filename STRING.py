@@ -1,9 +1,17 @@
 """Python Strings are immutable"""
 """Immutable objects are passed by value"""
+"""
+Immutable objects
+Numbers
+Strings
+Tuples
+Frozen Sets
+"""
 
 import string 
 import datetime
 def test_func1(s):
+    print(id(s))
     size = len(s)
     for i in range(size):
         if s[i]=='M':
@@ -50,9 +58,12 @@ def test_func5(s):
     """Converted in list"""
     s=''.join(s)
     return s
-
-print(test_func1('MOHIM'))
-print(test_func2('MOHIM'))
+s="MOHIM"
+print(id(s))
+a=test_func1(s)
+print(id(a))
+print(test_func1(s))
+print(test_func2(s))
 print(test_func3('MOHIM'))
 print(test_func4('MOHIM'))
 print(test_func5('M-O-H-I-M'))
@@ -104,3 +115,23 @@ print(f"{'mohimmmmmmmmm':.5}")
 s = '  MOHIM  '
 
 print(s.strip())
+
+
+import copy
+s1 = 'mohim'
+print(id(s1))
+s = copy.copy(s1)
+print(id(s))
+s1=s1.upper()
+print(s,s1)
+print(id(s1))
+size = len(s)
+for i in range(size):
+    if s[i]=='M':
+        s = s.replace(s[i],'W')
+    elif s[i] =='O':
+        s = s.replace(s[i],'A')
+
+print(id(s))
+
+"""A shallow copy of a string is essentially a reference to the same string object. Since strings are immutable, any modifications to one copy will not affect the other. However, both copies will still refer to the same underlying string data in memory."""
