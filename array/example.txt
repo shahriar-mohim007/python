@@ -1,0 +1,8 @@
+'VCI8VyRWs2tv0seMa5BR0HbmzgNDjm6r5mACzufS19NvfYM7SkI3coEiKeX9+mVEc8qqmjVuQFiwpRWE8l3njEP3DSWTOtGyvusrGa6J6p6vP1JPg5qUCTnCG6fnjRTqQNnS9JkRPhqa43vpS61+hMCh8mzJ2GBhY3KxTgEg23M='
+curl -X POST https://mfsupaytopit.pubalibankbd.com:8775/api/v1/auth -H "x-api-key: 24E876DA7839C332FD647B393B48EBDA8B108DCB" -H "Content-Type: Application/json" -d '{
+  "clientid": "21",
+  "userid": "upay2pbl",
+  "password": "12345678",
+  "datasign": "VCI8VyRWs2tv0seMa5BR0HbmzgNDjm6r5mACzufS19NvfYM7SkI3coEiKeX9+mVEc8qqmjVuQFiwpRWE8l3njEP3DSWTOtGyvusrGa6J6p6vP1JPg5qUCTnCG6fnjRTqQNnS9JkRPhqa43vpS61+hMCh8mzJ2GBhY3KxTgEg23M="
+}'
+
